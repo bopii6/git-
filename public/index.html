@@ -2,69 +2,44 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#FF2442" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>小红书爆款改写器</title>
-    <meta name="description" content="AI智能改写，让你的文案秒变小红书爆款" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 顶部导航栏 -->
-    <nav class="nav-bar">
-      <div class="logo-icon">书</div>
-      <span class="title">小红书爆款改写器</span>
-    </nav>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
 
-    <!-- 主容器 -->
-    <main class="app-container">
-      <!-- 输入卡片 -->
-      <div class="card fade-in">
-        <div class="card-header">
-          <h2 class="card-title">
-            <span class="icon">✍️</span>
-            原始文案
-          </h2>
-          <span class="card-badge">AI智能改写</span>
-        </div>
-        <div class="input-area">
-          <textarea
-            id="sourceText"
-            placeholder="粘贴或输入你的原始文案，AI会帮你改写成小红书爆款风格~"
-            maxlength="2000"
-          ></textarea>
-          <span class="char-count"><span id="charCount">0</span>/2000</span>
-        </div>
-        <div class="tips-row">
-          <span class="tip-tag" data-tip="产品种草">💄 产品种草</span>
-          <span class="tip-tag" data-tip="生活分享">🏠 生活分享</span>
-          <span class="tip-tag" data-tip="干货教程">📚 干货教程</span>
-        </div>
-      </div>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">AI 生文服务</p>
+        <h1>把普通文字改写成小红书爆款</h1>
+        <p class="subhead">
+          交给 qwen-plus，让文字更抓人、更会种草，还带上恰到好处的表情包。
+        </p>
+      </header>
 
-      <!-- 结果卡片 -->
-      <div class="card result-area fade-in">
-        <div class="card-header">
-          <h2 class="card-title">
-            <span class="icon">✨</span>
-            改写结果
-          </h2>
-          <button id="copyBtn" class="copy-btn">复制文案</button>
+      <section class="panel">
+        <label class="label" for="sourceText">原始文字</label>
+        <textarea
+          id="sourceText"
+          placeholder="粘贴或输入你的原始文案..."
+          rows="8"
+        ></textarea>
+        <div class="actions">
+          <button id="rewriteBtn">开始改写</button>
+          <span id="status" class="status">准备就绪</span>
         </div>
-        <div id="result" class="result-content empty">
-          等待你的输入~
+      </section>
+
+      <section class="panel output">
+        <div class="output-head">
+          <h2>改写结果</h2>
+          <button id="copyBtn" class="ghost">复制结果</button>
         </div>
-      </div>
+        <pre id="result">等待你的输入…</pre>
+      </section>
     </main>
-
-    <!-- 底部固定按钮 -->
-    <div class="bottom-bar">
-      <button id="rewriteBtn" class="primary-btn">
-        ✨ 一键改写
-      </button>
-      <p id="status" class="status-text">让文案更抓人、更会种草</p>
-    </div>
 
     <script src="app.js"></script>
   </body>
