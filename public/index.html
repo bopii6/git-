@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>小红书爆款改写器</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">AI 生文服务</p>
+        <h1>把普通文字改写成小红书爆款</h1>
+        <p class="subhead">
+          交给 qwen-plus，让文字更抓人、更会种草，还带上恰到好处的表情包。
+        </p>
+      </header>
+
+      <section class="panel">
+        <label class="label" for="sourceText">原始文字</label>
+        <textarea
+          id="sourceText"
+          placeholder="粘贴或输入你的原始文案..."
+          rows="8"
+        ></textarea>
+        <div class="actions">
+          <button id="rewriteBtn">开始改写</button>
+          <span id="status" class="status">准备就绪</span>
+        </div>
+      </section>
+
+      <section class="panel output">
+        <div class="output-head">
+          <h2>改写结果</h2>
+          <button id="copyBtn" class="ghost">复制结果</button>
+        </div>
+        <pre id="result">等待你的输入…</pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
